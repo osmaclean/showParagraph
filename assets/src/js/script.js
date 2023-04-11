@@ -1,5 +1,4 @@
 
-// ; (function () {
 
 const paragraph = Array.from(document.querySelectorAll('.card p'));
 const originTexts = paragraph.map(p => p.innerText);
@@ -13,7 +12,6 @@ paragraph.forEach((p, i) => {
         btn.innerHTML = '<i class="fas fa-chevron-down"></i>'
         p.parentElement.classList.add('text-hidden');
 
-        // btn.addEventListener('click', toggleText);
         btn.addEventListener('click', function (e) {
             toggleText(e, p, i)
         });
@@ -36,5 +34,3 @@ function toggleText(e, p, i) {
         card.querySelector('p').textContent = originTexts[i];
     };
 };
-
-// })();
